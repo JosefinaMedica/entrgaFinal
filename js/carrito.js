@@ -1,5 +1,5 @@
 function fotoProductos() {
-  let productos = cargarCarritoLS();
+  let productos = cargarCarrito();
   let contenido = `<table class="table">`;
 
   if (cantidadTotalProductos() > 0) {
@@ -41,7 +41,7 @@ function agregarProducto(id) {
 }
 
 function eliminarProducto(id) {
-  let productos = cargarCarritoLS();
+  let productos = cargarCarrito();
   let index = -1;
 
   for (let i = 0; i < productos.length; i++) {
@@ -53,7 +53,7 @@ function eliminarProducto(id) {
 
   if (index !== -1) {
     productos.splice(index, 1);
-    guardarCarritoLS(productos);
+    guardarCarrito(productos);
     fotoProductos();
   }
 }

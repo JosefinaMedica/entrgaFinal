@@ -2,9 +2,9 @@ async function mostrarProducto() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const idProducto = urlParams.get('id')
-  console.log(idProducto)
+
   const producto = await buscarProductoPorId(idProducto)
-  console.log(producto)
+
   let contenido = `<div class="col-md-4">
     <img src="${producto.imagen}" class="card-img-top img-thumbnail rounded mx-auto d-block rounded " alt="${producto.nombre}">
   </div>
@@ -20,4 +20,4 @@ async function mostrarProducto() {
     
 
 mostrarProducto();
-botonCarrito();
+mostrarBotonCarrito();

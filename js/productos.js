@@ -1,5 +1,6 @@
 async function mostrarProductos() {
-  const productos = await cargarProductos()
+  const productos = await cargarProductos();
+
   let contenido = "";
   productos.forEach(producto => {
     contenido += `<div class="col-md-3 mb-5">
@@ -17,4 +18,6 @@ async function mostrarProductos() {
 }
 
 mostrarProductos();
+mostrarBotonCarrito();
+
 
